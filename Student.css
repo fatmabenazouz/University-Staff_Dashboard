@@ -1,0 +1,229 @@
+/* Residents */
+  /* Overview Section Styles */
+  .p-6 {
+    padding: 1.5rem;
+  }
+
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .m-4 {
+    margin: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .gap-4 {
+    gap: 1rem;
+  }
+  
+  .bg-blue-100 {
+    background-color: #fe9696;
+  }
+  
+  .bg-green-100 {
+    background-color: #a3ff8e;
+  }
+  
+  .bg-purple-100 {
+    background-color: #fffd7f;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  /* Table Styles */
+  .min-w-full {
+    min-width: 100%;
+  }
+  
+  .border {
+    border: 1px solid #e5e7eb;
+  }
+  
+  .border-gray-300 {
+    border-color: #d1d5db;
+  }
+  
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .border-b {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  #filter-status {
+    width: 200px;
+  }
+  
+  /* button */
+  button {
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #1eff267b; /* Changes the color to blue on hover */
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bg-green-500 {
+    background-color: #2863a793; 
+  }
+  
+  .bg-blue-500:hover {
+    background-color: #1d8e2577; 
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Default Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  thead {
+    background: #f8f9fa;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #fff;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode table {
+    background-color: #333;
+  }
+  
+  body.dark-mode th, body.dark-mode td {
+    border: 1px solid #444;
+    color: #ccc;
+  }
+  
+  body.dark-mode thead {
+    background: #222;
+  }
+  
+  body.dark-mode tbody tr:nth-child(odd) {
+    background: #444;
+  }
+  
+  body.dark-mode tbody tr:nth-child(even) {
+    background: #555;
+  }
+  .requests th,
+  .requests td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .requests td input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .requests td button {
+    padding: 5px 10px;
+    background-color: #235a9586;
+    color: white;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+  }

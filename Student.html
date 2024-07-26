@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residence Life</title>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    #filter-status {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="header-left">
+        <span class="material-icons-outlined" onclick="toggleSearch()">search</span>
+        <input type="text" id="search-bar" placeholder="Search..." onkeyup="searchResidents()">
+      </div>
+      <div class="header-right">
+        <span class="material-icons-outlined" onclick="toggleNotifications()">notifications</span>
+        <span class="material-icons-outlined" onclick="toggleProfile()">account_circle</span>
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">apartment</span> RESIDENCE
+        </div>
+        <span class="material-icons-outlined closeIcon" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="dashboard.html">
+            <span class="material-icons-outlined">dashboard</span> Dashboard
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="rooms.html">
+            <span class="material-icons-outlined">meeting_room</span> Rooms
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="Student.html">
+            <span class="material-icons-outlined">person</span> Student
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="maintenance.html">
+            <span class="material-icons-outlined">build</span> Maintenance
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="event.html">
+            <span class="material-icons-outlined">event</span> Events
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="settings.html">
+            <span class="material-icons-outlined">settings</span> Settings
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+            <a href="Account.html">
+              <span class="material-icons-outlined">person</span> Account
+            </a>
+          </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <div class="main-title">
+        <h2>RESIDENTS</h2>
+      </div>
+
+      <!-- Overview Section -->
+        <h2 class="text-2xl font-bold mb-4">Overview</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="p-4 bg-red-100 rounded-lg text-center">
+            <h3 class="text-xl font-semibold">Total Residents</h3>
+            <p id="total-residents" class="text-2xl">705</p>
+          </div>
+          <div class="p-4 bg-green-100 rounded-lg text-center">
+            <h3 class="text-xl font-semibold">New Residents</h3>
+            <p id="new-residents" class="text-2xl">45</p>
+          </div>
+          <div class="p-4 bg-yellow-100 rounded-lg text-center">
+            <h3 class="text-xl font-semibold">Pending Resident</h3>
+            <p id="pending-approvals" class="text-2xl">29</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search and Filter Section -->
+        <h2 class="text-2xl font-bold mb-4">Search and Filter</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" id="search-residents" class="p-2 border border-gray-300 rounded-lg w-full" placeholder="Search by name, ID or room" onkeyup="searchResidents()">
+          <select id="filter-status" class="p-2 border border-gray-300 rounded-lg w-full md:w-40" onchange="filterResidents()">
+          </select>
+        </div>
+      </div>
+
+      <!-- Residents List Section -->
+      <div class="p-6 bg-white shadow-md rounded-lg m-4 overflow-x-auto">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-bold">Residents List</h2>
+          <button class="bg-green-500 text-white p-2 rounded-lg hover:bg-blue-500" onclick="openAddResidentModal()">Add New Resident</button>
+        </div>
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 border-b">ID</th>
+              <th class="py-2 px-4 border-b">Name</th>
+              <th class="py-2 px-4 border-b">Room</th>
+              <th class="py-2 px-4 border-b">Email</th>
+            </tr>
+          </thead>
+          <tbody id="residents-table">
+            <tr>
+              <td class="py-2 px-4 border-b">001</td>
+              <td class="py-2 px-4 border-b">Claire Woods</td>
+              <td class="py-2 px-4 border-b">68</td>
+              <td class="py-2 px-4 border-b">your@example.com</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">010</td>
+              <td class="py-2 px-4 border-b">Nicole Obi</td>
+              <td class="py-2 px-4 border-b">189</td>
+              <td class="py-2 px-4 border-b">your@example.com</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">024</td>
+              <td class="py-2 px-4 border-b">Susan Ianzi</td>
+              <td class="py-2 px-4 border-b">38</td>
+              <td class="py-2 px-4 border-b">your@example.com</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">033</td>
+              <td class="py-2 px-4 border-b">Robert Gates</td>
+              <td class="py-2 px-4 border-b">59</td>
+              <td class="py-2 px-4 border-b">your@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Add Resident Modal -->
+    <div id="add-resident-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeAddResidentModal()">&times;</span>
+        <h2>Add New Resident</h2>
+        <form id="add-resident-form" onsubmit="addResident(event)">
+          <label for="resident-id">ID</label>
+          <input type="text" id="resident-id" required>
+          
+          <label for="resident-name">Name</label>
+          <input type="text" id="resident-name" required>
+          
+          <label for="resident-room">Room</label>
+          <input type="text" id="resident-room" required>
+          
+          <label for="resident-email">Email</label>
+          <input type="email" id="resident-email" required>
+          <button type="submit" class="bg-green-500 text-white p-2 rounded-lg hover:bg-blue-500">Add Resident</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/residents.js"></script>
+</body>
+</html>
