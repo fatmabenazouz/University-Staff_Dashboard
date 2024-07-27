@@ -5,7 +5,6 @@ const roomsData = [
     
 ];
 
-// Function to display rooms in the table
 function displayRooms(rooms) {
     const roomsTable = document.getElementById('rooms-table');
     roomsTable.innerHTML = '';
@@ -22,10 +21,8 @@ function displayRooms(rooms) {
     });
 }
 
-// Initial display of rooms
 displayRooms(roomsData);
 
-// Search and filter functionality
 document.getElementById('search-bar').addEventListener('input', function () {
     const searchQuery = this.value.toLowerCase();
     const filteredRooms = roomsData.filter(room =>

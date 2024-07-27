@@ -146,7 +146,7 @@ body {
   height: 100vh;
 }
 
-/* ---------- HEADER ---------- */
+/* -- header -- */
 .header {
   grid-area: header;
   height: 70px;
@@ -161,7 +161,7 @@ body {
   display: none;
 }
 
-/* ---------- SIDEBAR ---------- */
+/* --sidebar-- */
 
 #sidebar {
   grid-area: sidebar;
@@ -224,7 +224,7 @@ body {
   margin-top: 17px;
 }
 
-/* ---------- MAIN ---------- */
+/* --main-- */
 
 .main-container {
   grid-area: main;
@@ -294,7 +294,7 @@ body {
 }
 
 .card-inner > .material-icons-outlined {
-  font-size: 30px; /* Reduced from 45px */
+  font-size: 30px;
 }
 
 .charts {
@@ -370,7 +370,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* Settings Section*/
+/* settings*/
 
 #settingsForm {
   max-width: 800px;
@@ -409,9 +409,7 @@ button:hover {
   background-color: #e71c1c;
 }
 
-/* ---------- MEDIA QUERIES ---------- */
-
-/* Medium <= 992px */
+/* --media queries-- */
 
 @media screen and (max-width: 992px) {
   .grid-container {
@@ -435,7 +433,6 @@ button:hover {
   }
 }
 
-/* Small <= 768px */
 
 @media screen and (max-width: 768px) {
   .main-cards {
@@ -450,7 +447,6 @@ button:hover {
   }
 }
 
-/* Extra Small <= 576px */
 
 @media screen and (max-width: 576px) {
   .hedaer-left {
@@ -489,7 +485,6 @@ td {
   background-color: #f1f1f1;
 }
 
-/* Add Event Form Styling */
 #event-form-container {
   margin-top: 20px;
   padding: 20px;
@@ -546,7 +541,9 @@ td {
   border-radius: 7px;
   color: white;
 }
-/* Button Styles */
+
+/* buttons */
+
 button {
   border: none;
   border-radius: 4px;
@@ -583,13 +580,12 @@ button.delete-btn:hover {
 @media screen and (max-width: 576px) {
   .sidebar-title > span {
     position: relative;
-    left: 25px; /* Move the icon up */
+    left: 25px;
   }
 }
 
 /* report  */
 
-/* Reports Section Styling */
 .reports-summary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -617,7 +613,6 @@ button.delete-btn:hover {
   margin: 10px 0 0;
 }
 
-/* Reports Table Styling */
 .reports-table {
   width: 100%;
   border-collapse: collapse;
@@ -645,7 +640,6 @@ button.delete-btn:hover {
   background-color: #f1f1f1;
 }
 
-/* Add/Edit Report Form Styling */
 #report-form-container {
   margin-top: 20px;
   padding: 20px;
@@ -698,7 +692,7 @@ button.delete-btn:hover {
 }
 
 
-  /* Dark mode styles for rooms and residents */
+  /* dark mode for rooms and residents */
   .dark-mode .p-6 {
     background-color: black;
     color: white;
@@ -787,8 +781,7 @@ button.delete-btn:hover {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 6px 20px rgba(255, 255, 255, 0.19);
   }
 
-  /* Residents */
-  /* Overview Section Styles */
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -865,7 +858,6 @@ button.delete-btn:hover {
   font-weight: 600;
 }
 
-/* Table Styles */
 .min-w-full {
   min-width: 100%;
 }
@@ -896,13 +888,13 @@ button.delete-btn:hover {
   width: 200px;
 }
 
-/* button */
+
 button {
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #e71c1c; /* Changes the color to blue on hover */
+  background-color: #e71c1c; 
 }
 
 .flex {
@@ -919,7 +911,6 @@ button:hover {
   background-color: #e71c1c; 
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -957,7 +948,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* Default Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -980,7 +970,7 @@ tbody tr:nth-child(even) {
   background: #fff;
 }
 
-/* Dark Mode Styles */
+/* dark mode */
 body.dark-mode table {
   background-color: #333;
 }
@@ -1025,7 +1015,6 @@ body.dark-mode tbody tr:nth-child(even) {
   cursor: pointer;
 }
 
-/* Small Devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
   .filters {
     flex-direction: column;

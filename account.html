@@ -5,17 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>University Residence Dashboard</title>
-
-  <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <div class="grid-container">
-    <!-- Header -->
+    <!-- header -->
     <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
           <span class="material-icons-outlined">menu</span>
@@ -33,17 +29,17 @@
             <span class="slider round"></span>
           </label>
         </div>
-  
       </header>
-      <!-- End Header -->
-      <!-- Profile Dropdown -->
+
+      <!-- profile -->
       <div id="profile-dropdown">
         <img src="profile-picture.jpg" alt="Profile Picture">
         <p>Simon Kabele</p>
         <a href="settings.html"><span class="material-icons-outlined">settings</span> Settings</a>
         <a href="#"><span class="material-icons-outlined">logout</span> Logout</a>
       </div>
-      <!-- Notification Dropdown -->
+
+      <!-- notifications -->
       <div id="notification-dropdown">
         <div class="notification">
           <h2>Notifications</h2>
@@ -60,7 +56,7 @@
         </div>
       </div>
   
-      <!-- Sidebar -->
+      <!-- sidebar -->
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
@@ -108,9 +104,8 @@
           </li>
   
       </aside>
-      <!-- End Sidebar -->
 
-    <!-- Main Content -->
+    <!-- main -->
     <main class="main-container">
       <h1>Account Settings</h1>
       <form id="settingsForm">
@@ -146,26 +141,6 @@
 
             </div>
         </form>
-        <!-- <h1>Payment Settings</h1>
-        <form id="settingsForm">
-            <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" name="card-number">
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv">
-            <label for="expiration-date">Expiration Date:</label>
-            <input type="date" id="expiration-date" name="expiration-date">
-            <label style=" margin-top: 10px" for="cvv">Room Number:</label>
-            <select type="number" name="room-no">
-                <option value="100">100</option>
-                <option value="101">101</option>
-                <option value="100">102</option>
-                <option value="101">103</option>
-                <option value="100">104</option>
-                <option value="101">105</option>
-                <option value="100">106</option>
-                <option value="101">107</option>
-            </select>
-        </form> -->
         <button type="submit">Save Settings</button>
     </main>
   </div>

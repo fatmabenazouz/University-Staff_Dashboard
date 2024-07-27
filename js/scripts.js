@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // SIDEBAR TOGGLE
+  // sidebar
   let sidebarOpen = false;
   const sidebar = document.getElementById('sidebar');
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // PIE CHART
+  // pie chart
   const pieChartOptions = {
     series: [347, 358],
     chart: {
@@ -46,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const pieChart = new ApexCharts(document.querySelector('#pie-chart'), pieChartOptions);
   pieChart.render();
-
-  // Add other functions here, ensuring they are within the DOMContentLoaded event listener
 
   function toggleSearch() {
     const searchBar = document.getElementById('search-bar');
@@ -90,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Example function to simulate sending a notification
   function sendNotification(name, title, details) {
     const notificationDropdown = document.getElementById('notification-dropdown');
     const newNotification = document.createElement('div');
@@ -102,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     notificationDropdown.appendChild(newNotification);
   }
 
-  // Theme Switcher
+  // theme switcher
   const themeSwitch = document.getElementById('themeSwitch');
   themeSwitch.addEventListener('change', function () {
     if (themeSwitch.checked) {
@@ -155,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Example function to simulate sending a notification
   function sendNotification(name, title, details) {
     const notificationDropdown = document.getElementById('notification-dropdown');
     const newNotification = document.createElement('div');
@@ -178,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderEvents() {
     const eventsTableBody = document.getElementById('events-table-body');
-    eventsTableBody.innerHTML = ''; // Clear any existing content
+    eventsTableBody.innerHTML = '';
 
     events.forEach(event => {
       const row = document.createElement('tr');
@@ -198,45 +194,39 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function viewEvent(id) {
-    // Implement view event functionality
     alert('Viewing event with ID: ' + id);
   }
 
   function updateEvent(id) {
-    // Implement update event functionality
     alert('Updating event with ID: ' + id);
   }
 
   function deleteEvent(id) {
-    // Implement delete event functionality
     if (confirm('Are you sure you want to delete this event?')) {
       const index = events.findIndex(event => event.id === id);
       if (index > -1) {
-        events.splice(index, 1); // Remove event from array
-        renderEvents(); // Re-render events list
+        events.splice(index, 1);
+        renderEvents(); 
       }
     }
   }
 
-  // Initial render
   renderEvents();
-  let editIndex = -1; // Track which event is being edited
+  let editIndex = -1; 
 
-// Show the event form
+// event form
 function showEventForm() {
     document.getElementById('event-form-container').classList.remove('hidden');
     document.getElementById('form-title').textContent = 'Add New Event';
     document.getElementById('event-form').reset();
-    editIndex = -1; // Reset edit index
-    hideEventDetails(); // Hide event details when showing form
+    editIndex = -1;
+    hideEventDetails(); 
 }
 
-// Hide the event form
 function hideEventForm() {
     document.getElementById('event-form-container').classList.add('hidden');
 }
 
-// Show event details
 function showEventDetails(row) {
     const cells = row.cells;
     document.getElementById('event-detail-title').textContent = cells[0].textContent;
@@ -246,14 +236,12 @@ function showEventDetails(row) {
     document.getElementById('event-details-container').classList.remove('hidden');
 }
 
-// Hide event details
 function hideEventDetails() {
     document.getElementById('event-details-container').classList.add('hidden');
 }
 
-// Add or update event
 function addEvent(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const title = document.getElementById('event-title').value;
     const date = document.getElementById('event-date').value;
@@ -262,7 +250,6 @@ function addEvent(event) {
 
     const tbody = document.getElementById('event-table-body');
     if (editIndex === -1) {
-        // Add new event
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
             <td>${title}</td>
@@ -277,7 +264,6 @@ function addEvent(event) {
         `;
         tbody.appendChild(newRow);
     } else {
-        // Update existing event
         const row = tbody.rows[editIndex];
         row.cells[0].textContent = title;
         row.cells[1].textContent = date;
@@ -290,7 +276,6 @@ function addEvent(event) {
     hideEventForm();
 }
 
-// Edit event
 function editEvent(button) {
     const row = button.parentElement.parentElement;
     const cells = row.cells;
@@ -306,11 +291,10 @@ function editEvent(button) {
     showEventForm();
 }
 
-// Delete event row
 function deleteRow(button) {
     const row = button.parentElement.parentElement;
     row.remove();
-    hideEventDetails(); // Hide event details when row is deleted
+    hideEventDetails(); 
 }
 
 document.getElementById('event-form').addEventListener('submit', addEvent);
@@ -336,20 +320,17 @@ let editingRow = null;
     document.getElementById('report-form').addEventListener('submit', function (event) {
       event.preventDefault();
 
-      // Get form values
       const date = document.getElementById('report-date').value;
       const type = document.getElementById('report-type').value;
       const description = document.getElementById('report-description').value;
       const status = document.getElementById('report-status').value;
 
       if (editingRow) {
-        // Update existing row
         editingRow.children[1].textContent = date;
         editingRow.children[2].textContent = type;
         editingRow.children[3].textContent = description;
         editingRow.children[4].textContent = status;
       } else {
-        // Create a new table row
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
                     <td>${Date.now()}</td>
@@ -363,22 +344,15 @@ let editingRow = null;
                     </td>
                 `;
 
-        // Add new row to the table body
         document.getElementById('reports-table-body').appendChild(newRow);
       }
 
-      // Update summary counts
       updateSummaryCounts();
-
-      // Hide the form
       toggleReportForm();
 
-      // Clear the form
       document.getElementById('report-form').reset();
       editingRow = null;
     });
-
-    // Update summary counts
     function updateSummaryCounts() {
       const totalReports = document.getElementById('reports-table-body').children.length;
       document.getElementById('total-reports').textContent = totalReports;
@@ -396,17 +370,14 @@ let editingRow = null;
       document.getElementById('pending-reports').textContent = pendingReports;
     }
 
-    // Event delegation for Edit and Delete buttons
     document.getElementById('reports-table-body').addEventListener('click', function (event) {
       if (event.target.classList.contains('edit-btn')) {
-        // Edit button clicked
         const row = event.target.closest('tr');
         const date = row.children[1].textContent;
         const type = row.children[2].textContent;
         const description = row.children[3].textContent;
         const status = row.children[4].textContent;
 
-        // Populate the form with existing row data
         document.getElementById('report-id').value = row.children[0].textContent;
         document.getElementById('report-date').value = date;
         document.getElementById('report-type').value = type;
@@ -417,7 +388,6 @@ let editingRow = null;
         document.getElementById('form-title').textContent = 'Edit Report';
         toggleReportForm();
       } else if (event.target.classList.contains('delete-btn')) {
-        // Delete button clicked
         if (confirm('Are you sure you want to delete this report?')) {
           const row = event.target.closest('tr');
           row.remove();
@@ -431,14 +401,12 @@ let editingRow = null;
 
 
 
-             // MAINTENANCE PAGE 
+             // maintenance page 
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Event listener for filtering requests
       document.getElementById('room-filter').addEventListener('input', filterRequests);
       document.getElementById('status-filter').addEventListener('change', filterRequests);
     
-      // Function to filter requests based on room and status
       function filterRequests() {
         const roomFilter = document.getElementById('room-filter').value.toLowerCase();
         const statusFilter = document.getElementById('status-filter').value.toLowerCase();
@@ -457,45 +425,36 @@ let editingRow = null;
           }
         });
       }
-    
-      // Function to update a maintenance request
+
       window.updateRequest = function(button) {
         const row = button.parentElement.parentElement;
         const note = row.querySelector('input[type="text"]').value;
-    
-        // Here you can add an AJAX call to save the note to the server
         console.log(`Note for room ${row.cells[0].textContent}: ${note}`);
       }
     
-      // Toggle profile dropdown
       document.querySelector('.material-icons-outlined.account_circle').addEventListener('click', () => {
         const profileDropdown = document.getElementById('profile-dropdown');
         profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
       });
     
-      // Toggle notification dropdown
       document.querySelector('.material-icons-outlined.notifications').addEventListener('click', () => {
         const notificationDropdown = document.getElementById('notification-dropdown');
         notificationDropdown.style.display = notificationDropdown.style.display === 'block' ? 'none' : 'block';
       });
     
-      // Toggle search bar
       window.toggleSearch = function() {
         const searchBar = document.getElementById('search-bar');
         searchBar.style.display = searchBar.style.display === 'none' ? 'block' : 'none';
       }
     
-      // Open sidebar
       window.openSidebar = function() {
         document.getElementById('sidebar').style.display = 'block';
       }
     
-      // Close sidebar
       window.closeSidebar = function() {
         document.getElementById('sidebar').style.display = 'none';
       }
     
-      // Toggle theme
       document.getElementById('themeSwitch').addEventListener('change', () => {
         document.body.classList.toggle('dark-mode');
       });
