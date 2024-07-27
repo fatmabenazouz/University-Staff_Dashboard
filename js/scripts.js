@@ -19,54 +19,15 @@ function closeSidebar() {
 
 // ---------- CHARTS ----------
 
-// BAR CHART
-const barChartOptions = {
-  series: [
-    {
-      data: [510, 530, 500, 752, 220, 100, 150],
-      name: 'Occupied',
-    },
-    {
-      data: [300, 200, 250, 600, 180, 90, 120],
-      name: 'Vacant',
-    },
-  ],
+// PIE CHART
+const pieChartOptions = {
+  series: [347, 358],
   chart: {
-    type: 'bar',
-    background: 'white',
+    type: 'pie',
     height: 350,
-    toolbar: {
-      show: false,
-    },
   },
+  labels: ['Male', 'Female'],
   colors: ['#FED0EEB2', '#D0E8FFB2'],
-  plotOptions: {
-    bar: {
-      distributed: true,
-      borderRadius: 4,
-      horizontal: false,
-      columnWidth: '60%',
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  fill: {
-    opacity: 1,
-  },
-  grid: {
-    borderColor: '#55596e',
-    yaxis: {
-      lines: {
-        show: true,
-      },
-    },
-    xaxis: {
-      lines: {
-        show: true,
-      },
-    },
-  },
   legend: {
     labels: {
       colors: '#474747',
@@ -74,70 +35,22 @@ const barChartOptions = {
     show: true,
     position: 'top',
   },
-  stroke: {
-    colors: ['transparent'],
-    show: true,
-    width: 2,
+  dataLabels: {
+    enabled: true,
+    style: {
+      colors: ['#474747'],
+    },
   },
   tooltip: {
-    shared: true,
-    intersect: false,
     theme: 'dark',
-  },
-  xaxis: {
-    categories: [
-      'January', 'January', 
-      'February', 'February', 
-      'March', 'March', 
-      'April'
-    ],
-    title: {
-      style: {
-        color: '#f5f7ff',
-      },
-    },
-    axisBorder: {
-      show: true,
-      color: '#474747',
-    },
-    axisTicks: {
-      show: true,
-      color: '#474747',
-    },
-    labels: {
-      style: {
-        colors: '#474747',
-      },
-    },
-  },
-  yaxis: {
-    title: {
-      text: 'Number of Rooms',
-      style: {
-        color: '#474747',
-      },
-    },
-    axisBorder: {
-      color: '#474747',
-      show: true,
-    },
-    axisTicks: {
-      color: '#474747',
-      show: true,
-    },
-    labels: {
-      style: {
-        colors: '#474747',
-      },
-    },
   },
 };
 
-const barChart = new ApexCharts(
-  document.querySelector('#bar-chart'),
-  barChartOptions
+const pieChart = new ApexCharts(
+  document.querySelector('#pie-chart'),
+  pieChartOptions
 );
-barChart.render();
+pieChart.render();
 
 
   function toggleSearch() {

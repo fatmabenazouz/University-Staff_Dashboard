@@ -27,14 +27,13 @@
         <span class="material-icons-outlined" onclick="toggleNotifications()">notifications</span>
         <span class="material-icons-outlined" onclick="toggleProfile()">account_circle</span>
         <label class="switch">
-
           <input type="checkbox" id="themeSwitch">
           <span class="slider round"></span>
         </label>
       </div>
-
     </header>
     <!-- End Header -->
+    
     <!-- Profile Dropdown -->
     <div id="profile-dropdown">
       <img src="profile-picture.jpg" alt="Profile Picture">
@@ -42,6 +41,7 @@
       <a href="settings.html"><span class="material-icons-outlined">settings</span> Settings</a>
       <a href="#"><span class="material-icons-outlined">logout</span> Logout</a>
     </div>
+    
     <!-- Notification Dropdown -->
     <div id="notification-dropdown">
       <div class="notification">
@@ -69,7 +69,6 @@
       </div>
 
       <ul class="sidebar-list">
-
         <li class="sidebar-list-item">
           <a href="dashboard.html">
             <span class="material-icons-outlined">dashboard</span> Dashboard
@@ -105,7 +104,7 @@
               <span class="material-icons-outlined">account_circle</span> Account
             </a>
           </li>
-
+      </ul>
     </aside>
     <!-- End Sidebar -->
 
@@ -116,7 +115,6 @@
       </div>
 
       <div class="main-cards" id="content">
-
         <div class="card">
           <div class="card-inner">
             <span class="material-icons-outlined">person</span>
@@ -124,7 +122,6 @@
           </div>
           <h1>850</h1>
         </div>
-
         <div class="card">
           <div class="card-inner">
             <span class="material-icons-outlined">people</span>
@@ -132,23 +129,20 @@
           </div>
           <h1>705</h1>
         </div>
-
         <div class="card">
           <div class="card-inner">
             <span class="material-icons-outlined">book</span>
-            <h3>Accomodated</h3>
+            <h3>Accommodated</h3>
           </div>
           <h1>65%</h1>
         </div>
       </div>
 
       <div class="charts">
-
         <div class="charts-card">
-          <h2 class="chart-title">  Occupancy by Room Type</h2>
-          <div id="bar-chart"></div>
+          <h2 class="chart-title">Occupancy by Gender</h2>
+          <div id="pie-chart"></div>
         </div>
-
       </div>
     </main>
 
@@ -157,8 +151,6 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="js/theme.js"></script>
-
 </body>
 
 </html>
