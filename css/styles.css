@@ -398,7 +398,7 @@ button {
   margin-top: 30px;
   margin-left: 80px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #4c61af;
   color: white;
   border: none;
   border-radius: 5px;
@@ -406,7 +406,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #00b333;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
@@ -542,7 +542,7 @@ td {
 .add-event-btn {
   padding: 10px 30px;
   border: none;
-  background-color: #4caf50;
+  background-color: #4c61af;
   border-radius: 7px;
   color: white;
 }
@@ -902,7 +902,7 @@ button {
 }
 
 button:hover {
-  background-color: #1e90ff; /* Changes the color to blue on hover */
+  background-color: #00b333; /* Changes the color to blue on hover */
 }
 
 .flex {
@@ -912,11 +912,11 @@ button:hover {
 }
 
 .bg-green-500 {
-  background-color: #28a745; 
+  background-color: #4c61af; 
 }
 
 .bg-blue-500:hover {
-  background-color: #1e90ff; 
+  background-color: #00b333; 
 }
 
 /* Modal */
@@ -1016,7 +1016,7 @@ body.dark-mode tbody tr:nth-child(even) {
 
 .requests td button {
   padding: 5px 10px;
-  background-color: #4caf50;
+  background-color: #4c61af;
   color: white;
   border: none;
   display: block;
