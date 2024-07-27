@@ -1,4 +1,5 @@
-   Residence Life Dashboard
+##   Residence Life Dashboard 
+
 In the dynamic environment of university residence halls, effective management and proactive engagement are crucial for fostering a positive living experience for students. The "Residence Life" dashboard has been meticulously crafted to meet these needs, providing university staff with an all-in-one tool to track, analyse, and enhance the residential living activities of students.
 
 Features:
