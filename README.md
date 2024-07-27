@@ -47,10 +47,10 @@ Challenges faced in the creation of the Dashboard
  Understanding the implementation of unique features: Understanding and implementing special features, like a theme switcher, posed a significant challenge when building my project dashboard. We had to ensure the theme switcher was integrated seamlessly, maintaining consistency and functionality across all components. This required deciding on appealing themes, managing persistent state changes, and ensuring compatibility with various devices. Additionally, we had to update and refactor existing code without disrupting current functionalities. This process highlighted the need for advanced technical skills and attention to detail, making it a significant hurdle during my project's development.
 
 Roles and Members of the Creation of Residence Life
-Christabel- UI/UX designer and front-end developer contributor
-Fatma- Front-end and back-end developer
-Abdulhammed-Front-end developer
-Tesfahun- Group member
-Jubril- Group member
+Christabel- UI/UX designer and front-end developer contributor,
+Fatma- Front-end and back-end developer,
+Abdulhammed-Front-end developer,
+Tesfahun- Group member,
+Jubril- Group member.
 
 
