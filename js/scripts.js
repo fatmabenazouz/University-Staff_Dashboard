@@ -1,57 +1,117 @@
-// SIDEBAR TOGGLE
+document.addEventListener('DOMContentLoaded', function () {
+  // SIDEBAR TOGGLE
+  let sidebarOpen = false;
+  const sidebar = document.getElementById('sidebar');
 
-let sidebarOpen = false;
-const sidebar = document.getElementById('sidebar');
-
-function openSidebar() {
-  if (!sidebarOpen) {
-    sidebar.classList.add('sidebar-responsive');
-    sidebarOpen = true;
+  function openSidebar() {
+    if (!sidebarOpen) {
+      sidebar.classList.add('sidebar-responsive');
+      sidebarOpen = true;
+    }
   }
-}
 
-function closeSidebar() {
-  if (sidebarOpen) {
-    sidebar.classList.remove('sidebar-responsive');
-    sidebarOpen = false;
+  function closeSidebar() {
+    if (sidebarOpen) {
+      sidebar.classList.remove('sidebar-responsive');
+      sidebarOpen = false;
+    }
   }
-}
 
-// ---------- CHARTS ----------
-
-// PIE CHART
-const pieChartOptions = {
-  series: [347, 358],
-  chart: {
-    type: 'pie',
-    height: 350,
-  },
-  labels: ['Male', 'Female'],
-  colors: ['#FED0EEB2', '#D0E8FFB2'],
-  legend: {
-    labels: {
-      colors: '#474747',
+  // PIE CHART
+  const pieChartOptions = {
+    series: [347, 358],
+    chart: {
+      type: 'pie',
+      height: 350,
     },
-    show: true,
-    position: 'top',
-  },
-  dataLabels: {
-    enabled: true,
-    style: {
-      colors: ['#474747'],
+    labels: ['Male', 'Female'],
+    colors: ['#D0E8FFB2', '#FED0EEB2'],
+    legend: {
+      labels: {
+        colors: '#474747',
+      },
+      show: true,
+      position: 'top',
     },
-  },
-  tooltip: {
-    theme: 'dark',
-  },
-};
+    dataLabels: {
+      enabled: true,
+      style: {
+        colors: ['#474747'],
+      },
+    },
+    tooltip: {
+      theme: 'dark',
+    },
+  };
 
-const pieChart = new ApexCharts(
-  document.querySelector('#pie-chart'),
-  pieChartOptions
-);
-pieChart.render();
+  const pieChart = new ApexCharts(document.querySelector('#pie-chart'), pieChartOptions);
+  pieChart.render();
 
+  // Add other functions here, ensuring they are within the DOMContentLoaded event listener
+
+  function toggleSearch() {
+    const searchBar = document.getElementById('search-bar');
+    if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+      searchBar.style.display = 'inline-block';
+      searchBar.focus();
+    } else {
+      searchBar.style.display = 'none';
+    }
+  }
+
+  function searchContent() {
+    let input = document.getElementById('search-bar').value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      let cardText = card.innerText.toLowerCase();
+      if (cardText.includes(input)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleProfile() {
+    const profileDropdown = document.getElementById('profile-dropdown');
+    if (profileDropdown.style.display === 'none' || profileDropdown.style.display === '') {
+      profileDropdown.style.display = 'block';
+    } else {
+      profileDropdown.style.display = 'none';
+    }
+  }
+
+  function toggleNotifications() {
+    const notificationDropdown = document.getElementById('notification-dropdown');
+    if (notificationDropdown.style.display === 'none' || notificationDropdown.style.display === '') {
+      notificationDropdown.style.display = 'block';
+    } else {
+      notificationDropdown.style.display = 'none';
+    }
+  }
+
+  // Example function to simulate sending a notification
+  function sendNotification(name, title, details) {
+    const notificationDropdown = document.getElementById('notification-dropdown');
+    const newNotification = document.createElement('div');
+    newNotification.classList.add('notification');
+    newNotification.innerHTML = `
+      <p class="notification-title">${title}</p>
+      <p class="notification-details">${details}</p>
+    `;
+    notificationDropdown.appendChild(newNotification);
+  }
+
+  // Theme Switcher
+  const themeSwitch = document.getElementById('themeSwitch');
+  themeSwitch.addEventListener('change', function () {
+    if (themeSwitch.checked) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  });
+});
 
   function toggleSearch() {
     const searchBar = document.getElementById('search-bar');
