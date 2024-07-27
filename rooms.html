@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>University Residence Dashboard</title>
+  <title>Residence Life</title>
 
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -138,9 +138,9 @@
         </div>
       </div>
   
-      <!-- Search and Filter Section -->
-      <div class="p-6 bg-white shadow-md rounded-lg m-4">
-        <h2 class="text-2xl font-bold mb-4">Search and Filter</h2>
+      <!-- Filter Section -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Filter</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input type="text" id="search-bar" class="p-2 border border-gray-300 rounded-lg w-full"
             placeholder="Search by room number or occupant name">
@@ -154,7 +154,7 @@
       </div>
   
       <!-- Room Details Section -->
-      <div class="p-6 bg-white shadow-md rounded-lg m-4 overflow-x-auto">
+      <div>
         <h2 class="text-2xl font-bold mb-4">Room Details</h2>
         <table class="min-w-full bg-white border border-gray-300">
           <thead>
@@ -165,7 +165,31 @@
               <th class="py-2 px-4 border-b">Occupant Name</th>
             </tr>
           </thead>
-          <tbody id="rooms-table">
+          <tbody id="residents-table">
+            <tr>
+              <td class="py-2 px-4 border-b">104</td>
+              <td class="py-2 px-4 border-b">29</td>
+              <td class="py-2 px-4 border-b">vacant</td>
+              <td class="py-2 px-4 border-b">None</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">044</td>
+              <td class="py-2 px-4 border-b">90</td>
+              <td class="py-2 px-4 border-b">booked</td>
+              <td class="py-2 px-4 border-b">Helen Green</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">024</td>
+              <td class="py-2 px-4 border-b">38</td>
+              <td class="py-2 px-4 border-b">Occupied</td>
+              <td class="py-2 px-4 border-b">Susan Ianzi</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">033</td>
+              <td class="py-2 px-4 border-b">59</td>
+              <td class="py-2 px-4 border-b">Occupied,booked</td>
+              <td class="py-2 px-4 border-b">Robert Gates, Joe Gates</td>
+            </tr>
           </tbody>
         </table>
       </div>
