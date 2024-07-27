@@ -406,7 +406,7 @@ button {
 }
 
 button:hover {
-  background-color: #00b333;
+  background-color: #e71c1c;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
@@ -902,7 +902,7 @@ button {
 }
 
 button:hover {
-  background-color: #00b333; /* Changes the color to blue on hover */
+  background-color: #e71c1c; /* Changes the color to blue on hover */
 }
 
 .flex {
@@ -916,7 +916,7 @@ button:hover {
 }
 
 .bg-blue-500:hover {
-  background-color: #00b333; 
+  background-color: #e71c1c; 
 }
 
 /* Modal */
