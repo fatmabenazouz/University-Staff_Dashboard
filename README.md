@@ -5,10 +5,9 @@
 
 ## Project Overview
 
-This group project is to showcase advanced front-end development skills by building a dynamic and user-friendly dashboard for a university residence management system.
+The University Residence Dashboard is a comprehensive web application designed to manage various aspects of university residence life. It includes features for managing events, handling student information, monitoring room status, and scheduling maintenance activities. The dashboard provides an intuitive user interface with a header for search and notifications, a sidebar for navigation, and a main content area for detailed interactions.
 
-## Project Description
-Develop a responsive and interactive dashboard for university residence staff using HTML, CSS, JavaScript, and a chosen framework (Bootstrap or Tailwind). The dashboard should provide functionalities like:
+
 ## Key Features
 
  - Data Visualization
