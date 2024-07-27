@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>University Residence Dashboard</title>
+  <title>Residence Life</title>
 
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -113,43 +113,33 @@
     <!-- Main Content -->
     <main class="main-container">
       <div class="main-title">
-        <h2>Student Residents</h2>
+        <h2>Student (Residents)</h2>
       </div>
 
       <!-- Overview Section -->
-      <div class="p-6 bg-white shadow-md rounded-lg m-4">
+      <div>
         <h2 class="text-2xl font-bold mb-4">Overview</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div class="p-4 bg-blue-100 rounded-lg text-center">
-            <h3 class="text-xl font-semibold">Total</h3>
+            <h3 class="text-xl font-semibold">Total Resident</h3>
             <p id="total-residents" class="text-2xl">705</p>
           </div>
           <div class="p-4 bg-green-100 rounded-lg text-center">
-            <h3 class="text-xl font-semibold">New</h3>
+            <h3 class="text-xl font-semibold">New Arrivals</h3>
             <p id="new-residents" class="text-2xl">45</p>
           </div>
-          <div class="p-4 bg-red-100 rounded-lg text-center">
-            <h3 class="text-xl font-semibold">Leaving</h3>
-            <p id="leaving-residents" class="text-2xl">200</p>
-          </div>
           <div class="p-4 bg-purple-100 rounded-lg text-center">
-            <h3 class="text-xl font-semibold">Pending</h3>
-            <p id="pending-approvals" class="text-2xl">150</p>
+            <h3 class="text-xl font-semibold">Pending Requests</h3>
+            <p id="pending-approvals" class="text-2xl">29</p>
           </div>
         </div>
       </div>
 
-      <!-- Search and Filter Section -->
-      <div class="p-6 bg-white shadow-md rounded-lg m-4">
-        <h2 class="text-2xl font-bold mb-4">Search and Filter</h2>
+      <!-- Search Section -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Search</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input type="text" id="search-residents" class="p-2 border border-gray-300 rounded-lg w-full" placeholder="Search by name, ID or room" onkeyup="searchResidents()">
-          <select id="filter-status" class="p-2 border border-gray-300 rounded-lg w-full md:w-40" onchange="filterResidents()">
-            <option value="">All Statuses</option>
-            <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
-            <option value="pending">Pending</option>
-          </select>
         </div>
       </div>
 
@@ -165,38 +155,33 @@
               <th class="py-2 px-4 border-b">ID</th>
               <th class="py-2 px-4 border-b">Name</th>
               <th class="py-2 px-4 border-b">Room</th>
-              <th class="py-2 px-4 border-b">Status</th>
               <th class="py-2 px-4 border-b">Email</th>
             </tr>
           </thead>
           <tbody id="residents-table">
             <tr>
               <td class="py-2 px-4 border-b">001</td>
-              <td class="py-2 px-4 border-b">Abasima Githi</td>
-              <td class="py-2 px-4 border-b">102</td>
-              <td class="py-2 px-4 border-b">Active</td>
-              <td class="py-2 px-4 border-b">agithi@res.com</td>
+              <td class="py-2 px-4 border-b">Claire Woods</td>
+              <td class="py-2 px-4 border-b">68</td>
+              <td class="py-2 px-4 border-b">cwoods@res.com</td>
             </tr>
             <tr>
-              <td class="py-2 px-4 border-b">002</td>
-              <td class="py-2 px-4 border-b">Afraya Jenoget</td>
-              <td class="py-2 px-4 border-b">103</td>
-              <td class="py-2 px-4 border-b">Pending</td>
-              <td class="py-2 px-4 border-b">ajenoget@res.com</td>
+              <td class="py-2 px-4 border-b">010</td>
+              <td class="py-2 px-4 border-b">Nicole Obi</td>
+              <td class="py-2 px-4 border-b">189</td>
+              <td class="py-2 px-4 border-b">nobi@res.com</td>
             </tr>
             <tr>
-              <td class="py-2 px-4 border-b">003</td>
-              <td class="py-2 px-4 border-b">Ratma Onyani</td>
-              <td class="py-2 px-4 border-b">104</td>
-              <td class="py-2 px-4 border-b">Inactive</td>
-              <td class="py-2 px-4 border-b">ronyani@res.com</td>
+              <td class="py-2 px-4 border-b">024</td>
+              <td class="py-2 px-4 border-b">Susan Ianzi</td>
+              <td class="py-2 px-4 border-b">38</td>
+              <td class="py-2 px-4 border-b">sianzi@res.com</td>
             </tr>
             <tr>
-              <td class="py-2 px-4 border-b">004</td>
-              <td class="py-2 px-4 border-b">Duniya Wache</td>
-              <td class="py-2 px-4 border-b">105</td>
-              <td class="py-2 px-4 border-b">Active</td>
-              <td class="py-2 px-4 border-b">dwachen@res.com</td>
+              <td class="py-2 px-4 border-b">033</td>
+              <td class="py-2 px-4 border-b">Robert Gates</td>
+              <td class="py-2 px-4 border-b">59</td>
+              <td class="py-2 px-4 border-b">rgates@res.com</td>
             </tr>
           </tbody>
         </table>
@@ -218,16 +203,9 @@
           <label for="resident-room">Room</label>
           <input type="text" id="resident-room" required>
           
-          <label for="resident-status">Status</label>
-          <select id="resident-status" required>
-            <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
-            <option value="pending">Pending</option>
-          </select>
-          
           <label for="resident-email">Email</label>
           <input type="email" id="resident-email" required>
-          <button type="submit" class="bg-green-500 text-white p-2 rounded-lg hover:bg-blue-500">Add Resident</button>
+          <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg hover:bg-red-500">Add Resident</button>
         </form>
       </div>
     </div>
