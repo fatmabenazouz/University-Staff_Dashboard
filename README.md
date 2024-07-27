@@ -17,7 +17,9 @@ Benefits:
 
 Here are the links to all things revolving around Residence Life:
 To the design layout: https://www.figma.com/design/jf8qHf96LqMbsCylkDjxfs/School-Dashboard-1-(Community)?node-id=506-2119&t=PSqS15E6GU4mxTpR-1
+
 To the Dashboard website: 127.0.0.1:5502/dashboard.html
+
 To the video presentation: https://youtu.be/oxoFJBrNLRQ
 
 Technical Choices and Rationale
