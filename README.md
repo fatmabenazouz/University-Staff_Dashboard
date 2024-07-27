@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-Welcome to the final summative project of the Advanced Front-End module. This group project is to showcase advanced front-end development skills by building a dynamic and user-friendly dashboard for a university residence management system.
+This group project is to showcase advanced front-end development skills by building a dynamic and user-friendly dashboard for a university residence management system.
 
 ## Project Description
 Develop a responsive and interactive dashboard for university residence staff using HTML, CSS, JavaScript, and a chosen framework (Bootstrap or Tailwind). The dashboard should provide functionalities like:
