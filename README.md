@@ -47,7 +47,9 @@ This project implements a dynamic University Residence Management System. It man
 
 ## Links related to Residence Life
 Design: https://www.figma.com/design/jf8qHf96LqMbsCylkDjxfs/School-Dashboard-1-(Community)?node-id=506-2119&t=2kGViuMzRiLj1cVw-1
-Website: 127.0.0.1:5502/dashboard.html
+
+Website: http://127.0.0.1:5502/dashboard.html
+
 Video presentation: https://youtu.be/oxoFJBrNLRQ
 
 
