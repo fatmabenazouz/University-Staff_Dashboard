@@ -45,10 +45,17 @@ This project implements a dynamic University Residence Management System. It man
 2. **Running the Project:**
    - Open `dashboard.html`, `maintenance.html`, etc. in a web browser to access different parts of the system.
 
+## Links related to Residence Life
+Design: https://www.figma.com/design/jf8qHf96LqMbsCylkDjxfs/School-Dashboard-1-(Community)?node-id=506-2119&t=2kGViuMzRiLj1cVw-1
+Website: 127.0.0.1:5502/dashboard.html
+Video presentation: https://youtu.be/oxoFJBrNLRQ
+
+
 ## Developers
 
 - **Oluomachi Christabel Madubuike**
 - **Fatma Ezzahra Ben Azouz**
 - **Abdulhammed Abdulazeez**
+## Others
 - **Tesfahun Zana Fola**
 - **Jubril Abdulazeez**
