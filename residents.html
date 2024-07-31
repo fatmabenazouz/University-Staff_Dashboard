@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Residence Life</title>
-
-  <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <style>
     #filter-status {
@@ -20,7 +16,7 @@
 
 <body>
   <div class="grid-container">
-    <!-- Header -->
+    <!-- header -->
     <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
           <span class="material-icons-outlined">menu</span>
@@ -40,15 +36,16 @@
         </div>
   
       </header>
-      <!-- End Header -->
-      <!-- Profile Dropdown -->
+
+      <!-- profile -->
       <div id="profile-dropdown">
         <img src="profile-picture.jpg" alt="Profile Picture">
         <p>Simon Kabele</p>
         <a href="settings.html"><span class="material-icons-outlined">settings</span> Settings</a>
         <a href="#"><span class="material-icons-outlined">logout</span> Logout</a>
       </div>
-      <!-- Notification Dropdown -->
+
+      <!-- notifications -->
       <div id="notification-dropdown">
         <div class="notification">
           <h2>Notifications</h2>
@@ -65,7 +62,7 @@
         </div>
       </div>
   
-      <!-- Sidebar -->
+      <!-- sidebar -->
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
@@ -97,11 +94,6 @@
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="event.html">
-              <span class="material-icons-outlined">event</span> Events
-            </a>
-          </li>
-          <li class="sidebar-list-item">
             <a href="settings.html">
               <span class="material-icons-outlined">settings</span> Settings
             </a>
@@ -113,15 +105,14 @@
           </li>
   
       </aside>
-      <!-- End Sidebar -->
 
-    <!-- Main Content -->
+    <!-- main -->
     <main class="main-container">
       <div class="main-title">
         <h2>Student (Residents)</h2>
       </div>
 
-      <!-- Overview Section -->
+      <!-- overview -->
       <div>
         <h2 class="text-2xl font-bold mb-4">Overview</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -140,7 +131,7 @@
         </div>
       </div>
 
-      <!-- Search Section -->
+      <!-- search -->
       <div>
         <h2 class="text-2xl font-bold mb-4">Search</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -148,7 +139,7 @@
         </div>
       </div>
 
-      <!-- Residents List Section -->
+      <!-- residents list -->
       <div class="p-6 bg-white shadow-md rounded-lg m-4 overflow-x-auto">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-2xl font-bold">Residents List</h2>
@@ -193,7 +184,6 @@
       </div>
     </main>
 
-    <!-- Add Resident Modal -->
     <div id="add-resident-modal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeAddResidentModal()">&times;</span>
@@ -216,7 +206,7 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/theme.js"></script>

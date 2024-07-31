@@ -5,17 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>University Residence Dashboard</title>
-
-  <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <div class="grid-container">
-    <!-- Header -->
+    <!-- header -->
     <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
           <span class="material-icons-outlined">menu</span>
@@ -35,15 +31,16 @@
         </div>
   
       </header>
-      <!-- End Header -->
-      <!-- Profile Dropdown -->
+
+      <!-- profile -->
       <div id="profile-dropdown">
         <img src="profile-picture.jpg" alt="Profile Picture">
         <p>Simon Kabele</p>
         <a href="settings.html"><span class="material-icons-outlined">settings</span> Settings</a>
         <a href="#"><span class="material-icons-outlined">logout</span> Logout</a>
       </div>
-      <!-- Notification Dropdown -->
+
+      <!-- notifications -->
       <div id="notification-dropdown">
         <div class="notification">
           <h2>Notifications</h2>
@@ -60,7 +57,7 @@
         </div>
       </div>
   
-      <!-- Sidebar -->
+      <!-- sidebar -->
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
@@ -92,11 +89,6 @@
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="event.html">
-              <span class="material-icons-outlined">event</span> Events
-            </a>
-          </li>
-          <li class="sidebar-list-item">
             <a href="settings.html">
               <span class="material-icons-outlined">settings</span> Settings
             </a>
@@ -108,73 +100,26 @@
           </li>
   
       </aside>
-      <!-- End Sidebar -->
 
-    <!-- Main Content -->
+    <!-- main -->
     <main class="main-container">
-      <h1>Payment Settings</h1>
-      <!-- <form id="settingsForm">
-        <label for="profilePicture">Profile Picture:</label>
-
-        <input type="file" id="profilePicture" name="profilePicture">
-
-
-        <label for="name">First Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="name">Second Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="name">Last Name:</label>
-        <input type="text" id="name" name="name">
-        <label for="name">Birth Date</label>
-        <input type="date" id="name" name="name" placeholder="Enter your birth date">
-
-        <label style="margin-left: 5px; margin-top: 20px;font-size: 20px" for="name">Gender</label>
-
-        <div style="display: flex; margin-top: 5px">
-          <input type="radio" id="male" name="gender" required>
-          <label style="margin-left: 10px; margin-top: 10px" for="male">Male</label>
-
-        </div>
-        <div style="display: flex;margin-top: 10px">
-          <input type="radio" id="female" name="gender" required>
-          <label style="margin-left: 10px; margin-top: 10px" for="female">Female</label>
-
-        </div>
-        <div style="display: flex;margin-top: 10px;align-items: center">
-          <input type="radio" id="other" name="gender" required>
-          <label style="margin-left: 10px; margin-top: 10px" for="other">Other</label>
-
-        </div>
-      </form> -->
-      <!-- <h1>Payment Settings</h1> -->
+      <h1>Username Settings</h1>
       <form id="settingsForm">
-        <label for="card-number">Card Number:</label>
+        <label for="card-number">Old Username:</label>
         <input type="text" id="card-number" name="card-number">
-        <label for="cvv">CVV:</label>
+        <label for="cvv">New Username:</label>
         <input type="text" id="cvv" name="cvv">
-        <label for="expiration-date">Expiration Date:</label>
+        <label for="expiration-date">Current Date of Username Change:</label>
         <input type="date" id="expiration-date" name="expiration-date">
-        <label style=" margin-top: 10px" for="cvv">Room Number:</label>
-        <select type="number" name="room-no">
-          <option value="100">100</option>
-          <option value="101">101</option>
-          <option value="100">102</option>
-          <option value="101">103</option>
-          <option value="100">104</option>
-          <option value="101">105</option>
-          <option value="100">106</option>
-          <option value="101">107</option>
         </select>
       </form>
       <button type="submit">Save Settings</button>
     </main>
   </div>
 
-  <!-- Scripts -->
-
+  <!-- scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/theme.js"></script>
 </body>
-
 </html>
